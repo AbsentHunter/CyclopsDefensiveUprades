@@ -1,0 +1,2 @@
+C:\Users\lalab\source\repos\CyclopsDefense\CyclopsDefense\obj\Debug\CyclopsDefense.csprojAssemblyReference.cache
+C:\Users\lalab\source\repos\CyclopsDefense\CyclopsDefense\obj\Debug\CyclopsDefense.csproj.CoreCompileInputs.cache
