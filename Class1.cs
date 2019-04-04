@@ -27,16 +27,15 @@ namespace CyclopsDefensiveUpgradesCore.Fabricator
         // Setting up class-level stuff
         public static TechType get;
         private readonly EquipmentType cyclopsUpgrade;
+        
 
-        protected Set
-
-        Set; static void PatchIt()
+        internal static void PatchIt()
         {
             // Nothing for Defensive Upgrades at the moment. May update at later date
             var tabIcon = ImageUtils.LoadSpriteFromFile(@"./Qmods/" + Assets + @"/TabIcon.png");
             CraftTreeHandler.AddTabNode(CraftTree.Type.Workbench, craftTab, "Cyclops Defensive Upgrades", tabIcon);
             UnityEngine.Debug.Log("[] Crafting tab Cyclops Defensive Upgrades created.");
-         
+
         }
 
         private static void CyclopsDefensiveUpgrades()
@@ -75,7 +74,7 @@ namespace CyclopsDefensiveUpgradesCore.Fabricator
         public override string[] StepsToFabricatorTab { get; } = craftPath;
         public override TechType RequiredForUnlock { get; } = TechType.SeamothElectricalDefense; // This will require the Seamoth's Perimeter Defense to unlock
 
-        public EquipmentType CyclopsUpgrade { get; }
+        public EquipmentType CyclopsModule { get; }
 
         public override GameObject GetGameObject()
         {
@@ -89,7 +88,7 @@ namespace CyclopsDefensiveUpgradesCore.Fabricator
         private void SetEquipmentType()
         {
             // Make sure it is usable in one of the upgrade slots for the Cyclops
-            CraftDataHandler.SetEquipmentType(this.TechType, this.CyclopsUpgrade);
+            CraftDataHandler.SetEquipmentType(this.TechType, this.CyclopsModule);
         }
     }
 
@@ -97,7 +96,4 @@ namespace CyclopsDefensiveUpgradesCore.Fabricator
     {
     }
 
-    internal class Set
-    {
-    }
 }
